@@ -104,7 +104,7 @@ def main(_):
                            ('train.config', FLAGS.train_config_path),
                            ('input.config', FLAGS.input_config_path)]:
         tf.gfile.Copy(config, os.path.join(FLAGS.train_dir, name),
-                      overwrite=True)
+                      overwrite=False)
 
   model_config = configs['model']
   train_config = configs['train_config']
